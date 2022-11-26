@@ -1,7 +1,10 @@
 export const Player = (props) => {
   return (
     <div className="player">
-      <li>{props.name}</li>
+      <li>
+        {" "}
+        Name: {props.name} (Score: {props.score})
+      </li>
     </div>
   );
 };
