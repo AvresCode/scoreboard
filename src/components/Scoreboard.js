@@ -15,6 +15,8 @@ export const Scoreboard = () => {
 
   const [sortBy, setSortBy] = useState("score");
 
+  const [score, setScore] = useState("");
+
   //sort players
   //   const sortedPlayers = [...players].sort(compareScore);
 
@@ -25,6 +27,15 @@ export const Scoreboard = () => {
   //change order
   const changeOrder = (event) => {
     setSortBy(event.target.value);
+  };
+
+  //
+  const incrementScore = (playerId) => {
+    console.log("clicked id:", playerId);
+    const newPlayersArray = [...players].map((player) =>
+      player.id === playerId ? { ...player, score: player.score + 1 } : player
+    );
+    setPlayers(newPlayersArray);
   };
 
   //
@@ -41,8 +52,8 @@ export const Scoreboard = () => {
       <p> Scoreboard's players:</p>
       <ul>
         {sortedPlayers.map((player) => (
-          //   <Player name={player.name} key={player.id} />
-          <Player {...player} key={player.id} />
+          //   <Player key={player.id} name={player.name} score={player.score} id={player.id} />
+          <Player {...player} key={player.id} incrementScore={incrementScore} />
         ))}
       </ul>
     </div>

@@ -4,6 +4,9 @@ export const Player = (props) => {
       <li>
         {" "}
         Name: {props.name} (Score: {props.score})
+        <button onClick={() => props.incrementScore(props.id)}>
+          Increment
+        </button>
       </li>
     </div>
   );
