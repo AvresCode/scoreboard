@@ -15,7 +15,7 @@ export const Scoreboard = () => {
 
   const [sortBy, setSortBy] = useState("score");
 
-  const [score, setScore] = useState("");
+  // const [score, setScore] = useState("");
 
   //sort players
   //   const sortedPlayers = [...players].sort(compareScore);
@@ -39,6 +39,11 @@ export const Scoreboard = () => {
   };
 
   //
+
+  const resetScore = () => {
+    const newScore = [...players].map((player) => ({ ...player, score: 0 }));
+    setPlayers(newScore);
+  };
   return (
     <div className="scoreboard">
       <div>
@@ -49,13 +54,23 @@ export const Scoreboard = () => {
           <option value="name"> Sort by name </option>
         </select>
       </div>
-      <p> Scoreboard's players:</p>
-      <ul>
-        {sortedPlayers.map((player) => (
-          //   <Player key={player.id} name={player.name} score={player.score} id={player.id} />
-          <Player {...player} key={player.id} incrementScore={incrementScore} />
-        ))}
-      </ul>
+      <div>
+        <p> Scoreboard's players:</p>
+        <p>
+          {" "}
+          <button onClick={resetScore}> Reset scores</button>
+        </p>
+        <ul>
+          {sortedPlayers.map((player) => (
+            //   <Player key={player.id} name={player.name} score={player.score} id={player.id} />
+            <Player
+              {...player}
+              key={player.id}
+              incrementScore={incrementScore}
+            />
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
