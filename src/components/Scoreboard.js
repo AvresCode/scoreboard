@@ -39,11 +39,22 @@ export const Scoreboard = () => {
   };
 
   //
-
   const resetScore = () => {
     const newScore = [...players].map((player) => ({ ...player, score: 0 }));
     setPlayers(newScore);
   };
+
+  // random score between 0 and 100
+  const randomizeScore = () => {
+    const randomScore = [...players].map((player) => ({
+      ...player,
+      score: Math.floor(Math.random() * 101),
+    }));
+
+    setPlayers(randomScore);
+  };
+
+  //
   return (
     <div className="scoreboard">
       <div>
@@ -59,7 +70,9 @@ export const Scoreboard = () => {
         <p>
           {" "}
           <button onClick={resetScore}> Reset scores</button>
+          <button onClick={randomizeScore}> Randomize scores</button>
         </p>
+
         <ul>
           {sortedPlayers.map((player) => (
             //   <Player key={player.id} name={player.name} score={player.score} id={player.id} />
