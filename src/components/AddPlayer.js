@@ -1,5 +1,5 @@
 import { useState } from "react";
-export const AddPlayer = (addPlayer) => {
+export const AddPlayer = ({ addPlayer }) => {
   const [name, setName] = useState("");
   return (
     <div>
@@ -18,7 +18,8 @@ export const AddPlayer = (addPlayer) => {
             setName("");
           }}
         >
-          Add
+          {" "}
+          Add{" "}
         </button>
       </p>
     </div>

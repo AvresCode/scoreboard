@@ -55,6 +55,13 @@ export const Scoreboard = () => {
     setPlayers(randomScore);
   };
 
+  //add a player
+  const addPlayer = (name) => {
+    const newPlayer = { id: Math.random(), name, score: 0 };
+    const newPlayersArray = [...players, newPlayer];
+    setPlayers(newPlayersArray);
+  };
+
   //
   return (
     <div className="scoreboard">
@@ -85,7 +92,7 @@ export const Scoreboard = () => {
           ))}
         </ul>
       </div>
-      <AddPlayer AddPlayer={AddPlayer} />
+      <AddPlayer addPlayer={addPlayer} />
     </div>
   );
 };
