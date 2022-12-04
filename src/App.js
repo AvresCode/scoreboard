@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import { Scoreboard } from "./components/Scoreboard";
 
 function App() {

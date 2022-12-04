@@ -1,0 +1,22 @@
+@import "./style/config";
+
+html,
+body {
+  color: $text-color;
+  font-family: "Alatsi", serif;
+  font-size: 18px; // the "base size" = 1rem
+  line-height: 140%;
+  // resets
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 (3 * $vertical-space) 0;
+}
+
+.App {
+  text-align: center;
+}

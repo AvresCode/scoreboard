@@ -1,0 +1,13 @@
+@import "../style/config";
+
+.Player {
+  display: block; // instead of list-item
+
+  background: $light;
+
+  p {
+    margin: 0;
+
+    padding: 0.5rem 0.7rem;
+  }
+}

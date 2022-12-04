@@ -1,13 +1,16 @@
+import "./Player.scss";
+
 export const Player = (props) => {
   return (
-    <div className="player">
-      <li>
+    <li className="Player">
+      {" "}
+      <p>
         {" "}
         Name: {props.name} (Score: {props.score})
         <button onClick={() => props.incrementScore(props.id)}>
           Increment
         </button>
-      </li>
-    </div>
+      </p>
+    </li>
   );
 };
