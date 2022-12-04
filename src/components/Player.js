@@ -3,7 +3,10 @@ import "./Player.scss";
 export const Player = (props) => {
   return (
     <li className="Player">
-      {" "}
+      <div
+        className="percentage_coloring"
+        style={{ width: props.score + "%" }}
+      />{" "}
       <p>
         {" "}
         Name: {props.name} (Score: {props.score})
