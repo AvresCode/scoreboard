@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Player } from "./Player";
 import { PlayerData } from "./PlayerData";
+import { AddPlayer } from "./AddPlayer";
 
 const compareScore = (playerA, playerB) => {
   return playerB.score - playerA.score;
@@ -84,6 +85,7 @@ export const Scoreboard = () => {
           ))}
         </ul>
       </div>
+      <AddPlayer AddPlayer={AddPlayer} />
     </div>
   );
 };
