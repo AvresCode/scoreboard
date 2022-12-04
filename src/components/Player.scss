@@ -23,7 +23,7 @@
   }
   &:hover .percentage_coloring {
     transform: scale(1, 2);
-    background: linear-gradient(90deg, #bf0073, #f20f0f);
+    background: linear-gradient(90deg, #e16f6f, #bf0073);
   }
 
   button {
@@ -45,7 +45,7 @@
     color: white;
 
     &:hover {
-      background: #f20f0f;
+      background: #e16f6f;
     }
   }
 }

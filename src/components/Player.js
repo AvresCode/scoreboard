@@ -9,7 +9,7 @@ export const Player = (props) => {
       />{" "}
       <p>
         {" "}
-        Name: {props.name} (Score: {props.score})
+        {props.name} (Score: {props.score})
         <button onClick={() => props.incrementScore(props.id)}>
           Increment
         </button>

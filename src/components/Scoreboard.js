@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Player } from "./Player";
 import { PlayerData } from "./PlayerData";
 import { AddPlayer } from "./AddPlayer";
+import "./Scoreboard.scss";
 
 const compareScore = (playerA, playerB) => {
   return playerB.score - playerA.score;
@@ -66,15 +67,15 @@ export const Scoreboard = () => {
   return (
     <div className="scoreboard">
       <div>
-        {" "}
-        Change order :{" "}
-        <select onChange={changeOrder} value={sortBy}>
-          <option value="score"> Sort by score </option>
-          <option value="name"> Sort by name </option>
-        </select>
-      </div>
-      <div>
         <p> Scoreboard's players:</p>
+        <div>
+          {" "}
+          Change order :{" "}
+          <select onChange={changeOrder} value={sortBy}>
+            <option value="score"> Sort by score </option>
+            <option value="name"> Sort by name </option>
+          </select>
+        </div>
         <p>
           {" "}
           <button onClick={resetScore}> Reset scores</button>
