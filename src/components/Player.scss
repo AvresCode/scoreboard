@@ -21,4 +21,8 @@
     background: linear-gradient(90deg, $secondary, $primary);
     transition: all 0.2s ease;
   }
+  &:hover .percentage_coloring {
+    transform: scale(1, 2);
+    background: linear-gradient(90deg, #bf0073, #f20f0f);
+  }
 }
